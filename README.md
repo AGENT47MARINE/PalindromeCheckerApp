@@ -106,6 +106,12 @@ Defines the startup behavior before palindrome processing begins.
 - Checks whether the string is a palindrome
 - Displays the result
 
+### UC3: Palindrome Check Using String Reverse
+- Reverse string using loop
+- Compare original and reversed
+- Display result
+
+
 ---
 
 This project serves as a beginner-friendly Java application demonstrating program structure, execution flow, and basic string processing logic.

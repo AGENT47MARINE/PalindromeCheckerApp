@@ -1,6 +1,6 @@
-//version 1.1
+//version 1.2
 //author:AGENT47MARINE
-//useCase 2:Hardcoded Palindrome Result
+//useCase 3:Palindrome Check Using String Reverse
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         System.out.println("Welcome to Palindrome Checker App Management System");
@@ -24,7 +24,15 @@ public class PalindromeCheckerApp {
         } else {
             System.out.println("'" + str + "' is not a palindrome.");
         }
-    }
 
+        String str2 = "radar";
+        String reversed = new StringBuilder(str2).reverse().toString();
+
+        if (str2==reversed) {
+            System.out.println("The word '" + str2 + "' is a palindrome.");
+        } else {
+            System.out.println("The word '" + str2 + "' is not a palindrome.");
+        }
+    }
     }
 }
