@@ -1,6 +1,6 @@
-//version 1.2
+//version 4.0
 //author:AGENT47MARINE
-//useCase 3:Palindrome Check Using String Reverse
+//useCase 4: Character Array Based Palindrome Check
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         System.out.println("Welcome to Palindrome Checker App Management System");
