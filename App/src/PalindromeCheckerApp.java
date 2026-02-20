@@ -1,6 +1,10 @@
-//version 3.0 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+//version 6.0
 //author:AGENT47MARINE
-//useCase 5: Stack-Based Palindrome Checker
+//useCase 6: Queue + Stack Based Palindrome Check
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         System.out.println("Welcome to Palindrome Checker App Management System");
@@ -67,6 +71,22 @@ public class PalindromeCheckerApp {
             }
         }
         System.out.println("Is '" + str3 + "' a palindrome? " + isPalindrome3);
+
+        String str4 = "civic";
+        boolean isPalindrome4 = true;
+        Queue<Character> queue = new LinkedList<>();
+        Stack<Character> stack1 = new Stack<>();
+        for (char c : str4.toCharArray()) {
+            stack1.push(c);
+            queue.add(c);
+        }
+        while (!stack1.isEmpty()) {
+            if (!stack1.pop().equals(queue.remove())) {
+                isPalindrome4 = false;
+                break;
+            }
+        }
+        System.out.println(str4 + "  "+"Result: " + isPalindrome4);
     }
 }
 
