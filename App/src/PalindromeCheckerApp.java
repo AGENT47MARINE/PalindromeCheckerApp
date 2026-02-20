@@ -1,6 +1,8 @@
-//version 4.0
+import java.util.Stack;
+
+//version 5.0
 //author:AGENT47MARINE
-//useCase 4: Character Array Based Palindrome Check
+//useCase 5: Stack-Based Palindrome Checker
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         System.out.println("Welcome to Palindrome Checker App Management System");
@@ -51,5 +53,21 @@ public class PalindromeCheckerApp {
             }
     }
         System.out.println("Palindrome =" + isPalindrome2);
+
+        String str3 = "noon";
+
+        Stack<Character> stack = new Stack<>();
+        for (char c : str3.toCharArray()){
+            stack.push(c);
+
+        }
+        boolean isPalindrome3 = true;
+        for (char c : str3.toCharArray()){
+            if (c != stack.pop()) {
+                isPalindrome3 = false;
+                break;
+            }
+        }
+        System.out.println("Is '" + str3 + "' a palindrome? " + isPalindrome3);
     }
 }
