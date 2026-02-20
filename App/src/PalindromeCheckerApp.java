@@ -2,9 +2,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-//version 5.0
+//version 6.0
 //author:AGENT47MARINE
-//useCase 5: Stack-Based Palindrome Checker
+//useCase 6: Queue + Stack Based Palindrome Check
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         System.out.println("Welcome to Palindrome Checker App Management System");
