@@ -116,11 +116,15 @@ Defines the startup behavior before palindrome processing begins.
 - Use two-pointer approach
 - Compare start & end characters
 
-### Stack-Based Palindrome Checker
+### UC5:Stack-Based Palindrome Checker
 - Push characters into stack
 - Pop and compare
 - Print result
 
+### UC6:Demonstrate FIFO vs LIFO using Queue and Stack.
+- Enqueue characters
+- Push characters to stack
+- Compare dequeue vs pop
 ---
 
 This project serves as a beginner-friendly Java application demonstrating program structure, execution flow, and basic string processing logic.
