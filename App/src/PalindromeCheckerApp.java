@@ -28,11 +28,28 @@ public class PalindromeCheckerApp {
         String str2 = "radar";
         String reversed = new StringBuilder(str2).reverse().toString();
 
-        if (str2==reversed) {
+        if (str2.equals(reversed)) {
             System.out.println("The word '" + str2 + "' is a palindrome.");
         } else {
             System.out.println("The word '" + str2 + "' is not a palindrome.");
         }
+
+        char[] chars = str2.toCharArray();
+        int start = 0;
+        int end = str2.length() -1;
+
+        boolean isPalindrome2= true;
+
+        while(start < end){
+            if (chars[start] == chars[end]){
+                start++;
+                end--;
+                continue;
+            }else{
+                isPalindrome2 = false;
+                break;
+            }
     }
+        System.out.println("Palindrome =" + isPalindrome2);
     }
 }
