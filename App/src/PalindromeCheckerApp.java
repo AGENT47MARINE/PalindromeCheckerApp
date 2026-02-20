@@ -1,4 +1,4 @@
-//version 1.1
+//version 2.0
 //author:AGENT47MARINE
 //useCase 2:Hardcoded Palindrome Result
 public class PalindromeCheckerApp {
