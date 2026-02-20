@@ -1,4 +1,4 @@
-//version 1.2
+//version 3.0
 //author:AGENT47MARINE
 //useCase 3:Palindrome Check Using String Reverse
 public class PalindromeCheckerApp {
