@@ -38,7 +38,7 @@ java -version
 ### Step 1: Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/AGENT47MARINE/PalindromeCheckerApp.git>
 ```
 
 ### Step 2: Navigate to the source directory
@@ -111,6 +111,15 @@ Defines the startup behavior before palindrome processing begins.
 - Compare original and reversed
 - Display result
 
+### UC4: Character Array Based Palindrome Check
+- Convert string to char[]
+- Use two-pointer approach
+- Compare start & end characters
+
+### Stack-Based Palindrome Checker
+- Push characters into stack
+- Pop and compare
+- Print result
 
 ---
 
