@@ -1,5 +1,3 @@
-import java.util.Stack;
-
 //version 5.0
 //author:AGENT47MARINE
 //useCase 5: Stack-Based Palindrome Checker
