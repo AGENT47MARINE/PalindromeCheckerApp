@@ -1,4 +1,4 @@
-//version 5.0
+//version 3.0 
 //author:AGENT47MARINE
 //useCase 5: Stack-Based Palindrome Checker
 public class PalindromeCheckerApp {
@@ -69,3 +69,4 @@ public class PalindromeCheckerApp {
         System.out.println("Is '" + str3 + "' a palindrome? " + isPalindrome3);
     }
 }
+
