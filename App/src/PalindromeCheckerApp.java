@@ -26,8 +26,10 @@ public class PalindromeCheckerApp {
         }
 
         String str2 = "radar";
-        String reversed = new StringBuilder(str2).reverse().toString();
-
+        String reversed ="";
+        for (int i = str2.length() - 1; i >= 0; i--) {
+            reversed += str2.charAt(i);
+        }
         if (str2.equals(reversed)) {
             System.out.println("The word '" + str2 + "' is a palindrome.");
         } else {
