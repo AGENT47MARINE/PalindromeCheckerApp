@@ -230,6 +230,30 @@ Regular expressions
 String / Array
 
 
+**UC11: Object-Oriented Palindrome Service**
+-
+**Goal:** 
+
+Encapsulate palindrome logic in a class.
+
+**Flow:**
+
+1.Create PalindromeChecker class
+
+2.Expose checkPalindrome() method
+
+**Key Concepts used in UC11 (OOPS):**
+
+Encapsulation
+
+Single Responsibility Principle
+
+**Data Structure:** 
+
+Internal (Stack / Array)
+
+
+
 
 
 This project serves as a beginner-friendly Java application demonstrating program structure, execution flow, and basic string processing logic.
