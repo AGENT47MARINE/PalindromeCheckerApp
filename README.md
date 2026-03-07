@@ -279,7 +279,26 @@ Strategy Pattern
 
 Varies per strategy
 
+**UC13: Performance Comparison**
+-
 
+**Goal:**
+
+Compare the performance of different palindrome approaches.
+
+**Flow:**
+
+1.Run multiple algorithms
+
+2.Capture execution time
+
+3.Display results
+
+**Key Concepts used in UC13:**
+
+System.nanoTime()
+
+Algorithm comparison
 
 
 
