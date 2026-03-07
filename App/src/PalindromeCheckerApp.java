@@ -2,10 +2,34 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.Deque;
-//version 10.0
+//version 11.0
 //author:AGENT47MARINE
-//Use Case 10: Case-Insensitive & Space-Ignored Palindrome
+//Use Case 11: Object-Oriented Palindrome Service (Encapsulation)
+// UC11: Object-Oriented Palindrome Service
+class PalindromeService {
+    /**
+     * Encapsulates the palindrome check logic.
+     * Demonstrates Single Responsibility Principle.
+     */
+    public boolean checkPalindrome(String input) {
+        if (input == null) return false;
 
+        // Internal Data Structure: Stack
+        Stack<Character> stack = new Stack<>();
+        String cleanInput = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        for (char c : cleanInput.toCharArray()) {
+            stack.push(c);
+        }
+
+        StringBuilder reversed = new StringBuilder();
+        while (!stack.isEmpty()) {
+            reversed.append(stack.pop());
+        }
+
+        return cleanInput.equals(reversed.toString());
+    }
+}
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         static class Node {
@@ -186,6 +210,12 @@ public class PalindromeCheckerApp {
         String inputUC10 = "A man a plan a canal Panama";
         boolean isPalUC10 = isPalindromeIgnoreCaseSpace(inputUC10);
         System.out.println("UC10 (Ignore Case & Space): Is '" + inputUC10 + "' a palindrome? " + isPalUC10);
+
+        // UC11: Object-Oriented Service Implementation
+        String inputUC11 = "Was it a car or a cat I saw";
+        PalindromeService service = new PalindromeService();
+        boolean isPalUC11 = service.checkPalindrome(inputUC11);
+        System.out.println("UC11 (OOPS Service): Is '" + inputUC11 + "' a palindrome? " + isPalUC11);
     }
 
 }
