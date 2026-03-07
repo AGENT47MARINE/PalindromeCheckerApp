@@ -1,10 +1,11 @@
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-
-//version 6.0
+import java.util.Deque;
+//version 7.0
 //author:AGENT47MARINE
-//useCase 6: Queue + Stack Based Palindrome Check
+//Use Case 7: Deque-Based Optimized Palindrome Checker
+
 public class PalindromeCheckerApp {
     public static void main(String[] args){
         System.out.println("Welcome to Palindrome Checker App Management System");
@@ -87,6 +88,22 @@ public class PalindromeCheckerApp {
             }
         }
         System.out.println(str4 + "  "+"Result: " + isPalindrome4);
+                // UC7: Deque-Based Optimized Palindrome Checker
+        String inputUC7 = "level";
+        Deque<Character> dequeUC7 = new LinkedList<>();
+        for (int i = 0; i < inputUC7.length(); i++) {
+            dequeUC7.addLast(inputUC7.charAt(i));
+        }
+        boolean isPalUC7 = true;
+        while (dequeUC7.size() > 1) {
+            char frontChar = dequeUC7.removeFirst();
+            char rearChar = dequeUC7.removeLast();
+            if (frontChar != rearChar) {
+                isPalUC7 = false;
+                break;
+            }
+        }
+        System.out.println("UC7 (Deque Optimized): Is '" + inputUC7 + "' a palindrome? " + isPalUC7);
     }
 }
 
