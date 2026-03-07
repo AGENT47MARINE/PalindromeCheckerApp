@@ -2,10 +2,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.Deque;
-//version 12.0
+//version 13.0
 //author:AGENT47MARINE
-//Use Case 12: Strategy Pattern for Palindrome Algorithms (Advanced)
-// UC11: Object-Oriented Palindrome Service
+//Use Case 13: Performance Comparison (Benchmarking Algorithms)
+import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Deque;
+
+// --- UC12: Strategy Pattern Definitions ---
+
 interface PalindromeStrategy {
     boolean check(String input);
 }
@@ -52,9 +58,6 @@ class PalindromeService {
         return cleanInput.equals(reversed.toString());
     }
 }
-
-// --- Main Application ---
-
 public class PalindromeCheckerApp {
 
     // Node Class for UC8
@@ -166,10 +169,10 @@ public class PalindromeCheckerApp {
         // UC8: Linked List Based Palindrome Checker
         String inputUC8 = "madam";
         Node head = new Node(inputUC8.charAt(0));
-        Node current = head;
+        Node currentUC8 = head;
         for (int i = 1; i < inputUC8.length(); i++) {
-            current.next = new Node(inputUC8.charAt(i));
-            current = current.next;
+            currentUC8.next = new Node(inputUC8.charAt(i));
+            currentUC8 = currentUC8.next;
         }
         Node slow = head, fast = head;
         while (fast != null && fast.next != null) { slow = slow.next; fast = fast.next.next; }
@@ -195,17 +198,28 @@ public class PalindromeCheckerApp {
         System.out.println("UC11 (OOPS Service): Is '" + inputUC11 + "' a palindrome? " + service.checkPalindrome(inputUC11));
 
         // UC12: Strategy Pattern for Palindrome Algorithms
-
         String inputUC12 = "racecar";
         PalindromeContext context = new PalindromeContext();
-
-        // Dynamically injecting StackStrategy
         context.setStrategy(new StackStrategy());
         System.out.println("UC12 (Stack Strategy): Is '" + inputUC12 + "' a palindrome? " + context.executeStrategy(inputUC12));
-
-        // Dynamically injecting DequeStrategy
         context.setStrategy(new DequeStrategy());
         System.out.println("UC12 (Deque Strategy): Is '" + inputUC12 + "' a palindrome? " + context.executeStrategy(inputUC12));
+
+        // UC13: Performance Comparison
+        System.out.println("\nUC13: Performance Comparison (Nanoseconds)");
+        String longInput = "a".repeat(1000) + "b" + "a".repeat(1000); // 2001 chars
+
+        // Measure Recursive Approach
+        long startTime = System.nanoTime();
+        isPalindromeRecursive(longInput, 0, longInput.length() - 1);
+        long endTime = System.nanoTime();
+        System.out.println("Recursive Check Time: " + (endTime - startTime) + " ns");
+
+        // Measure Strategy-Based Deque Approach
+        context.setStrategy(new DequeStrategy());
+        startTime = System.nanoTime();
+        context.executeStrategy(longInput);
+        endTime = System.nanoTime();
+        System.out.println("Deque Strategy Time:  " + (endTime - startTime) + " ns");
     }
 }
-
