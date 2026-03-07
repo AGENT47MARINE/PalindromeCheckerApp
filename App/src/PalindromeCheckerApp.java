@@ -2,9 +2,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.Deque;
-//version 8.0
+//version 9.0
 //author:AGENT47MARINE
-//Use Case 8: Linked List Based Palindrome Checker
+//Use Case 9: Recursive Palindrome Checker
 
 public class PalindromeCheckerApp {
     public static void main(String[] args){
@@ -28,6 +28,16 @@ public class PalindromeCheckerApp {
             current = nextNode;
         }
         return prev;
+    }
+        // Method for UC9 Recursive Palindrome Check
+    public static boolean isPalindromeRecursive(String str, int start, int end) {
+        if (start >= end) {
+            return true;
+        }
+        if (str.charAt(start) != str.charAt(end)) {
+            return false;
+        }
+        return isPalindromeRecursive(str, start + 1, end - 1);
     }
         System.out.println("Welcome to Palindrome Checker App Management System");
         String str = "madam";
@@ -152,6 +162,10 @@ public class PalindromeCheckerApp {
             tempSecond = tempSecond.next;
         }
         System.out.println("UC8 (Linked List): Is '" + inputUC8 + "' a palindrome? " + isPalUC8);
+        // UC9: Recursive Palindrome Checker
+        String inputUC9 = "refer";
+        boolean isPalUC9 = isPalindromeRecursive(inputUC9, 0, inputUC9.length() - 1);
+        System.out.println("UC9 (Recursive): Is '" + inputUC9 + "' a palindrome? " + isPalUC9);
     }
 
 }
